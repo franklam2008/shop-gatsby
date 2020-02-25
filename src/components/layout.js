@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-       123 <main>{children}</main>
+       <main>{children}</main>
         
         <Footer />
 
