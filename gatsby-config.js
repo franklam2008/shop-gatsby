@@ -26,6 +26,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+			resolve: 'gatsby-plugin-snipcartv3',
+			options: {
+        apiKey: process.env.SNIPCART_KEY,
+        autopup:true
+			}
+		},
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
