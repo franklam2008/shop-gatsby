@@ -1,36 +1,48 @@
-// import React from "react"
 import React from "react"
-import styled from "styled-components"
 import { Link } from "gatsby"
+//pages
 import NavItems from "./NavItems"
-
+//css
+import styled from "styled-components"
+import { Icon } from "semantic-ui-react"
+//assets
+import teaIcon from "../images/teaIcon.png"
 const HeaderCon = styled.div`
-  background: var(--baseColorSaved);
+  background: var(--baseWhite);
   margin: 0 auto;
   margin-bottom: 1.45rem;
-  padding: 1.45rem 1.0875rem;
   display: flex;
   justify-content: space-evenly;
-
-
-  a {
-    color: white;
-    text-decoration: none;
-    font-size:2rem;
+  align-items: center;
+`
+const NavLeft = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 0;
   }
 `
-export default function Header({ siteTitle }) {
-  console.log("123")
+const NavRight = styled.div`
+  i {
+    color: var(--baseBlack);
+  }
+`
+export default function Header() {
 
   return (
     <HeaderCon>
-      <div className="navLeft">
-        <Link to="/">{siteTitle}</Link>
-
+      <NavLeft>
+        <Link to="/">
+          <img src={teaIcon} alt="mainIcon" />
+        </Link>
         <NavItems />
-      </div>
-
-      <button className="snipcart-checkout">Cart</button>
+      </NavLeft>
+      <NavRight>
+        <Icon className="snipcart-checkout" name="shopping cart" />
+      </NavRight>
     </HeaderCon>
   )
 }
