@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import { graphql }from "gatsby"
 //lib
-// import axios from "axios";
 import { Container } from "semantic-ui-react"
 import { Card } from "semantic-ui-react"
 //pages
@@ -45,7 +45,7 @@ export default function shop({ data }) {
                   className="snipcart-add-item"
                   data-item-id={product.id}
                   data-item-price={product.productPrice}
-                  data-item-url="/paintings/starry-night"
+                  data-item-url="https://hopeful-hoover-997c24.netlify.com/shop/"
                   data-item-description={
                     product.productDescription.content[0].content[0].value
                   }
