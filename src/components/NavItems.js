@@ -17,6 +17,7 @@ export default function NavItems() {
       <Link to="/returns/">Shipping &amp; Returns</Link>
       <Link to="/about/">About Us</Link>
       <Link to="/faq/">FAQ</Link>
+      <Link to="/contact/">Contact Us</Link>
     </NavItemsCon>
   )
 }
