@@ -52,7 +52,7 @@ export default function shop({ data }) {
                   data-item-image={product.productImg.fixed.src}
                   data-item-name={product.title}
                 >
-                  Add to cart
+                  Add to cart now
                 </button>
               </Card.Content>
             </Card>
