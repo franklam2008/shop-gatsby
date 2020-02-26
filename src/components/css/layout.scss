@@ -9,13 +9,15 @@ html {
     -moz-osx-font-smoothing: grayscale;
   }
   :root {
-    --darkerSaved: #0f0e16;
+    --baseBlack: #0f0e16;
     --darkSaved: #17141d;
     --baseColorSaved: #1f1c28;
     --specialColorSaved: #e52e71;
     --mainColorSaved: #ff8a00;
     --textSaved: #f3f4f7;
     --subTextSaved: #536171;
+    --baseGreen:#60a448;
+    --baseWhite:#f8f8f8;
   }
   article,
   aside,
