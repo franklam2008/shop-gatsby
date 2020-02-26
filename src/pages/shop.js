@@ -23,33 +23,34 @@ export default function shop({ data }) {
       <SEO title="Shop" />
       <Container>
         <Card.Group centered>
-          {data.menu.edges.map(element => (
-            <Card key={element.node.id}>
+        
+          {data.menu.edges.map(({ node: product }) => (
+            <Card key={product.id}>
               <Card.Content>
                 <Card.Header>
-                  <Header>{element.node.title}</Header>
+                  <Header>{product.title}</Header>
                 </Card.Header>
                 <Card.Meta>
                   <span className="date">Joined in 2015</span>
                 </Card.Meta>
-                <Img fixed={element.node.productImg.fixed} />
+                <Img fixed={product.productImg.fixed} />
 
                 <Card.Description>
-                  {element.node.productDescription.content[0].content[0].value}
+                  {product.productDescription.content[0].content[0].value}
                 </Card.Description>
               </Card.Content>
               <Card.Content>
-                <span>$ {element.node.productPrice}</span>
+                <span>$ {product.productPrice}</span>
                 <button
                   className="snipcart-add-item"
-                  data-item-id={element.node.id}
-                  data-item-price={element.node.productPrice}
+                  data-item-id={product.id}
+                  data-item-price={product.productPrice}
                   data-item-url="/paintings/starry-night"
                   data-item-description={
-                    element.node.productDescription.content[0].content[0].value
+                    product.productDescription.content[0].content[0].value
                   }
-                  data-item-image={element.node.productImg.fixed.src}
-                  data-item-name={element.node.title}
+                  data-item-image={product.productImg.fixed.src}
+                  data-item-name={product.title}
                 >
                   Add to cart
                 </button>
@@ -72,7 +73,7 @@ export const query = graphql`
           productPrice
           productImg {
             fixed(width: 200, height: 200) {
-              ...GatsbyContentfulFixed_tracedSVG
+              ...GatsbyContentfulFixed
             }
           }
           productDescription {
