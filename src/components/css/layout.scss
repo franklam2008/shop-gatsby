@@ -8,6 +8,15 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  :root {
+    --darkerSaved: #0f0e16;
+    --darkSaved: #17141d;
+    --baseColorSaved: #1f1c28;
+    --specialColorSaved: #e52e71;
+    --mainColorSaved: #ff8a00;
+    --textSaved: #f3f4f7;
+    --subTextSaved: #536171;
+  }
   article,
   aside,
   details,
@@ -608,6 +617,7 @@ html {
   tt:after {
     letter-spacing: -0.2em;
     content: " ";
+    
   }
   pre code:before,
   pre code:after,

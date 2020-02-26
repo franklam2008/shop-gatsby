@@ -8,20 +8,29 @@ const HeaderCon = styled.div`
   background: var(--baseColorSaved);
   margin: 0 auto;
   margin-bottom: 1.45rem;
-  maxwidth: 960;
   padding: 1.45rem 1.0875rem;
-  h1 a {
+  display: flex;
+  justify-content: space-evenly;
+
+
+  a {
     color: white;
     text-decoration: none;
+    font-size:2rem;
   }
 `
 export default function Header({ siteTitle }) {
   console.log("123")
+
   return (
     <HeaderCon>
-      <Link to="/">{siteTitle}</Link>
+      <div className="navLeft">
+        <Link to="/">{siteTitle}</Link>
 
-      <NavItems />
+        <NavItems />
+      </div>
+
+      <button className="snipcart-checkout">Cart</button>
     </HeaderCon>
   )
 }
