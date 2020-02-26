@@ -45,7 +45,7 @@ export default function shop({ data }) {
                   className="snipcart-add-item"
                   data-item-id={product.id}
                   data-item-price={product.productPrice}
-                  data-item-url="https://hopeful-hoover-997c24.netlify.com/shop/"
+                  data-item-url="https://shop-gatsby.netlify.com/shop/"
                   data-item-description={
                     product.productDescription.content[0].content[0].value
                   }
