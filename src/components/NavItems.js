@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-const NavItemsCon = styled.span`
+const NavItemsCon = styled.div`
   a {
-    color: white;
+    color: var(--baseBlack);
     text-decoration: none;
-    margin-right: 10px;
-    font-size: 2em;
+    margin-left: 15px;
+    font-size: 1.15rem;
   }
 `
 export default function NavItems() {
@@ -14,8 +14,9 @@ export default function NavItems() {
     <NavItemsCon className="NavItemsCon">
       <Link to="/">Home</Link>
       <Link to="/shop/">Shop</Link>
-      <Link to="/page-2/">Page-2</Link>
-      <Link to="/page-3/">Page-3</Link>
+      <Link to="/returns/">Shipping &amp; Returns</Link>
+      <Link to="/about/">About Us</Link>
+      <Link to="/faq/">FAQ</Link>
     </NavItemsCon>
   )
 }
