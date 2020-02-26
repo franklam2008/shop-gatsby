@@ -7,35 +7,29 @@
 
 // import React from "react";
 import React from "react"
-import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby";
-
+import styled from "styled-components"
 import Header from "./header"
+import Promotion from "./promotion"
 import Footer from "./footer"
 //css
 import "./css/layout.css"
-
+const MainCon = styled.div`
+  margin: 0 auto;
+  min-height:80vh;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+`
 const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <Header siteTitle={"Shop"} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Promotion />
+      <Header />
+      <MainCon>
         <main>{children}</main>
-
-        <Footer />
-      </div>
+      </MainCon>
+      <Footer />
     </React.Fragment>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
