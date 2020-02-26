@@ -18,8 +18,8 @@ body {
   --mainColorSaved: #ff8a00;
   --textSaved: #f3f4f7;
   --subTextSaved: #536171;
-  --baseGreen:#60a448;
-  --baseWhite:#f8f8f8;
+  --baseGreen: #60a448;
+  --baseWhite: #f8f8f8;
 }
 
 article,
@@ -239,13 +239,6 @@ textarea {
   font: inherit;
 }
 
-html {
-  font: 112.5%/1.45em georgia, serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-y: scroll;
-}
-
 * {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
@@ -259,30 +252,6 @@ html {
 *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-}
-
-body {
-  color: rgba(0, 0, 0, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  -webkit-font-kerning: normal;
-          font-kerning: normal;
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
-
-img {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 
 h1 {
