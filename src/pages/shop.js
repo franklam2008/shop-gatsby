@@ -59,7 +59,7 @@ export default function shop({ data }) {
           ))}
         </Card.Group>
       </Container>
-      <Link to="/page-3/">Go back to the page 3</Link>
+      <Link to="/">Go back home</Link>
     </Layout>
   )
 }
