@@ -7,6 +7,12 @@ const NavItemsCon = styled.div`
     text-decoration: none;
     margin-left: 15px;
     font-size: 1.15rem;
+    &:hover {
+      color: var(--baseGreen);
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 `
 export default function NavItems() {
