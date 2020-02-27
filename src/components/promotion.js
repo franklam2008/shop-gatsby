@@ -6,6 +6,8 @@ import styled from "styled-components"
 const PromotionCon = styled.div`
 background-color:var(--baseGreen);
   text-align:center;
+  color:var(--baseWhite);
+  padding:2px 0;
 `
 
 export default function Promotion() {
