@@ -1,19 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import { graphql }from "gatsby"
+import { graphql } from "gatsby"
 //lib
-import { Container } from "semantic-ui-react"
-import { Card } from "semantic-ui-react"
-//pages
+import { Container, Divider, Card } from "semantic-ui-react"
+//components
 import Layout from "../components/layout"
+import Product from "../components/product"
 //CSS
 import SEO from "../components/seo"
 import styled from "styled-components"
 import "semantic-ui-css/semantic.min.css"
-const Header = styled.div`
-  color: var(--darkSaved);
-  font-family: monospace;
+
+const ProductsCon = styled.div`
+  .card {
+    text-align: center;
+    margin: 0 auto;
+    .gatsby-image-wrapper {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
 `
 
 export default function shop({ data }) {
@@ -22,44 +27,23 @@ export default function shop({ data }) {
     <Layout>
       <SEO title="Shop" />
       <Container>
-        <Card.Group centered>
-        
-          {data.menu.edges.map(({ node: product }) => (
-            <Card key={product.id}>
-              <Card.Content>
-                <Card.Header>
-                  <Header>{product.title}</Header>
-                </Card.Header>
-                <Card.Meta>
-                  <span className="date">Joined in 2015</span>
-                </Card.Meta>
-                <Img fixed={product.productImg.fixed} />
-
-                <Card.Description>
-                  {product.productDescription.content[0].content[0].value}
-                </Card.Description>
-              </Card.Content>
-              <Card.Content>
-                <span>$ {product.productPrice}</span>
-                <button
-                  className="snipcart-add-item"
-                  data-item-id={product.id}
-                  data-item-price={product.productPrice}
-                  data-item-url="https://shop-gatsby.netlify.com/shop/"
-                  data-item-description={
-                    product.productDescription.content[0].content[0].value
-                  }
-                  data-item-image={product.productImg.fixed.src}
-                  data-item-name={product.title}
-                >
-                  Add to cart now
-                </button>
-              </Card.Content>
-            </Card>
-          ))}
-        </Card.Group>
+        <h1>Product</h1>
+        <p>
+          We are excited to share some of our popular teas and botanicals with a
+          blend of tradition and innovation. It is our mission to connect you to
+          the gardens and mountains where we source organic teas and botanicals.
+          This practice is the foundation of our next-level tea quality and
+          blending innovation.
+        </p>
+        <Divider />
+        <ProductsCon>
+          <Card.Group centered>
+            {data.menu.edges.map(({ node: product }) => (
+              <Product product={product} key={product.id} />
+            ))}
+          </Card.Group>
+        </ProductsCon>
       </Container>
-      <Link to="/">Go back home</Link>
     </Layout>
   )
 }
