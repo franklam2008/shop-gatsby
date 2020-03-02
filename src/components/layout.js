@@ -10,7 +10,6 @@ import React from "react"
 import styled from "styled-components"
 import Header from "./header"
 import Promotion from "./promotion"
-import { Container } from "semantic-ui-react"
 import Footer from "./footer"
 import MobileNav from "./mobileNav"
 //css
@@ -21,12 +20,10 @@ const FullPage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position:relative;
+  position: relative;
 `
 const MainCon = styled.div`
   flex: 1;
-  margin: 0 auto;
-  max-width: 960px;
   text-align: left;
 `
 const Layout = ({ children }) => {
@@ -34,9 +31,7 @@ const Layout = ({ children }) => {
     <FullPage>
       <Promotion />
       <Header />
-      <MainCon>
-        <Container>{children}</Container>
-      </MainCon>
+      <MainCon>{children}</MainCon>
       <Footer />
       <MobileNav />
     </FullPage>

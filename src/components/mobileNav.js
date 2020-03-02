@@ -3,18 +3,18 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 const MobileNav = styled.div`
-  background-color: var(--baseGreen);
+  background-color: var(--baseGreenLight);
   display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 0 3px 0;
   a,
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--baseWhite);
+    color: var(--subTextSaved);
     cursor: pointer;
     i {
       font-size: 18px;

@@ -8,15 +8,14 @@ import { Icon } from "semantic-ui-react"
 //assets
 import teaIcon from "../images/teaIcon.png"
 const HeaderCon = styled.div`
-  background: var(--baseWhite);
+  /* background: var(--baseWhite); */
   width: 100%;
   margin: 0 auto;
   margin-bottom: 1.45rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
- 
+  padding: 10px 50px;
 `
 const NavLeft = styled.div`
   display: flex;

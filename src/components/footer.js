@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import { Container, Icon, Grid, Divider } from "semantic-ui-react"
 import teaIcon from "../images/teaIcon.png"
 const Footer = styled.div`
+  background-color: var(--baseGray);
+  padding-top:20px;
   .container {
     .column {
       margin: 0 !important;
@@ -44,8 +46,9 @@ const FooterNav = styled.nav`
   flex-direction: column;
   align-items: flex-end;
   a {
-    color: var(--baseBlack);
+    color: var(--subTextSaved);
     font-size: 12px;
+    margin-bottom: 10px;
     &:hover {
       color: var(--baseGreen);
       text-decoration: underline;
@@ -61,23 +64,31 @@ const FooterNav = styled.nav`
 `
 const MadeWith = styled.div`
   font-size: 12px;
+  text-align:right;
   i {
     color: var(--baseRed);
     margin: 0;
     font-size: 12px;
   }
+  @media (max-width: 768px) {
+    text-align:center;
+
+  }
 `
 const ReservedSpan = styled.div`
+  text-align:right;
   font-size: 14px;
   padding-top: 10px;
   opacity: 0.2;
+  @media (max-width: 768px) {
+    text-align:center;
+
+  }
 `
 export default function footer() {
   return (
     <Footer>
       <Container>
-        <Divider />
-        {/* <div class="ui mobile reversed stackable equal width grid"> */}
         <Grid columns={2} stackable reversed="mobile">
           <Grid.Column>
             <FooterLeft>
@@ -87,13 +98,8 @@ export default function footer() {
                   <span>Great Earth Tea</span>
                 </Link>
               </SiteInfo>
-              <MadeWith>
-                Made with <Icon name="heart" /> in Orlando, Florida
-              </MadeWith>
-              <ReservedSpan>
-                © {new Date().getFullYear()}, Built with Gatsby JS All rights
-                reserved.
-              </ReservedSpan>
+             
+              
             </FooterLeft>
           </Grid.Column>
           <Grid.Column>
@@ -104,9 +110,16 @@ export default function footer() {
               <Link to="/about/">Returns</Link>
               <Link to="/about/">Privacy</Link>
               <Link to="/about/">FAQ</Link>
+             
             </FooterNav>
+            <MadeWith>
+                Made with <Icon name="heart" /> in Orlando, Florida
+              </MadeWith>
+              <ReservedSpan>
+                © {new Date().getFullYear()}, Built with Gatsby JS All rights
+                reserved.
+              </ReservedSpan>
           </Grid.Column>
-          {/* </div> */}
         </Grid>
       </Container>
     </Footer>
