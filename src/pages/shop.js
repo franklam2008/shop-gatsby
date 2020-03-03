@@ -13,10 +13,7 @@ import "semantic-ui-css/semantic.min.css"
 const ProductsCon = styled.div`
   .card {
     text-align: center;
-    margin: 0 auto;
     .gatsby-image-wrapper {
-      text-align: center;
-      margin: 0 auto;
     }
   }
 `
@@ -27,7 +24,7 @@ export default function shop({ data }) {
     <Layout>
       <SEO title="Shop" />
       <Container>
-        <h1>Product</h1>
+        <h1>New Products</h1>
         <p>
           We are excited to share some of our popular teas and botanicals with a
           blend of tradition and innovation. It is our mission to connect you to
