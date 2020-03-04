@@ -4,8 +4,8 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import VSensorjs from "../VisibilitySensor"
 const ProductHeader = styled.div`
+  margin-top: 5px;
   color: var(--darkSaved);
-  font-family: monospace;
 `
 const CardFooter = styled.div`
   display: flex;

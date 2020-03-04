@@ -10,7 +10,7 @@ import teaIcon from "../images/teaIcon.png"
 const HeaderCon = styled.div`
   /* background: var(--baseWhite); */
   width: 100%;
-  max-width:1500px;
+  max-width: 1500px;
   margin: 0 auto;
   margin-bottom: 1.45rem;
   display: flex;
@@ -25,6 +25,12 @@ const NavLeft = styled.div`
 
   img {
     max-width: 30px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    img {
+      margin: 0 auto;
+    }
   }
 `
 const NavRight = styled.div`

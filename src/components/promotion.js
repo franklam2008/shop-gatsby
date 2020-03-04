@@ -3,6 +3,7 @@ import React from "react"
 //css
 import styled from "styled-components"
 //assets
+
 const PromotionCon = styled.div`
 background-color:var(--baseGreen);
   text-align:center;

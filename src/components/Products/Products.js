@@ -10,12 +10,13 @@ const ProductsCon = styled.div`
     text-align: center;
     margin: 10px;
     margin-bottom: 20px !important;
+    box-shadow: none;
     .gatsby-image-wrapper {
       width: 100px;
     }
   }
 `
-const ComponentName = ({ max }) => {
+const Products = ({ max }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -56,4 +57,4 @@ const ComponentName = ({ max }) => {
     ></StaticQuery>
   )
 }
-export default ComponentName
+export default Products

@@ -1,10 +1,13 @@
 import React from "react"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import { Container, Grid, Button } from "semantic-ui-react"
 import { Link } from "gatsby"
-import teaHome from "../images/teaHome.png"
 import VSensorjs from "../components/VisibilitySensor"
 import Products from "../components/Products/Products"
+// import { useSiteMetadata } from "./hook/useStaticQuery"
+import { useSiteImages } from "./hook/useSiteImages"
+
 const HomeCon = styled.div`
   div.HomePageSubCon:nth-child(odd) {
     background: white;
@@ -24,16 +27,17 @@ const FirstCon = styled.div`
   p {
     opacity: 0.6;
   }
-  .imgCon {
-    width: 100%;
-    text-align: right;
-    img {
-      max-width: 400px;
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    text-align: center;
+    .gatsby-image-wrapper {
+      margin:0 auto;
+      width:300px;
     }
   }
 `
 const HomePageSubCon = styled.div`
-  /* background-color: var(--baseWhite); */
   text-align: center;
   padding: 50px 0;
   h3 {
@@ -47,11 +51,16 @@ const HomePageSubCon = styled.div`
     max-width: 700px;
     margin: 0 auto;
   }
-  .btn {
-  }
+
 `
 
-const ComponentName = () => {
+export default () => {
+  const { edges } = useSiteImages()
+  const skillObj = edges.filter(
+    ({ node: skillNode }) =>
+      skillNode.childImageSharp.fluid.originalName === "teaHome.png"
+  )
+  const imgSrc = skillObj[0].node.childImageSharp.fluid
   return (
     <HomeCon>
       <FirstCon>
@@ -70,9 +79,7 @@ const ComponentName = () => {
               </VSensorjs>
             </Grid.Column>
             <Grid.Column>
-              <div className="imgCon">
-                <img src={teaHome} alt="teaHomeIcon" />
-              </div>
+              <Img fluid={imgSrc} alt="teaHomeIcon" />
             </Grid.Column>
           </Grid>
         </Container>
@@ -134,5 +141,3 @@ const ComponentName = () => {
     </HomeCon>
   )
 }
-
-export default ComponentName
