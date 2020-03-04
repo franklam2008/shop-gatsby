@@ -8,6 +8,7 @@ const NavItemsCon = styled.div`
     text-decoration: none;
     margin-left: 1.5rem;
     font-size: 1.2rem;
+    font-weight:300;
     transform: scale(1, 0.1);
     display: inline-block;
     transform: scale(1, 0.9);

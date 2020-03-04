@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Accordion, Grid } from "semantic-ui-react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -58,6 +58,7 @@ const Panel2 = [
   },
 ]
 const FAQPage = styled.div`
+  padding-bottom: 50px;
   h4 {
     font-weight: 900;
     font-family: "Nunito";
@@ -74,17 +75,17 @@ const FAQPage = styled.div`
 `
 
 const FAQ = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "teaIcon.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     placeholderImage: file(relativePath: { eq: "berry.jpg" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           src
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <Layout>
       <SEO title="FAQ" />

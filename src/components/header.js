@@ -10,6 +10,7 @@ import teaIcon from "../images/teaIcon.png"
 const HeaderCon = styled.div`
   /* background: var(--baseWhite); */
   width: 100%;
+  max-width:1500px;
   margin: 0 auto;
   margin-bottom: 1.45rem;
   display: flex;
@@ -21,15 +22,20 @@ const NavLeft = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
   img {
     max-width: 30px;
   }
 `
 const NavRight = styled.div`
+  cursor: pointer;
   i {
-    cursor: pointer;
     color: var(--baseBlack);
-    &:hover {
+    margin-left: 10px;
+  }
+  &:hover {
+    color: var(--baseGreen);
+    i {
       color: var(--baseGreen);
     }
   }
@@ -46,8 +52,9 @@ export default function Header() {
         </Link>
         <NavItems />
       </NavLeft>
-      <NavRight>
-        <Icon className="snipcart-checkout" name="shopping cart" />
+      <NavRight className="snipcart-checkout">
+        <span>Cart</span>
+        <Icon name="shopping cart" />
       </NavRight>
     </HeaderCon>
   )

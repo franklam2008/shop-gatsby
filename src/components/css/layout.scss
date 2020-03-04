@@ -22,6 +22,16 @@ body {
   --baseRed: #e74c3d;
   --baseGray: #f7f7f7;
 }
+.invisible {
+  transition: 1.5s all !important;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.visible {
+  transition: 1.5s all !important;
+  opacity: 1;
+  transform: translateY(0px);
+}
 
 article,
 aside,

@@ -31,7 +31,6 @@ const MainCon = styled.div`
     font-family: "Nunito";
     text-align: center;
   }
-  padding-bottom: 20px;
 `
 const Layout = ({ children }) => {
   return (

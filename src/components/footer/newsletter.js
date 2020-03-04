@@ -1,11 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import { Form, Button } from "semantic-ui-react"
-// import bgImg from "../../images/berry.jpg"
+import bgImg from "../../images/computer.jpg"
+import { Container } from "semantic-ui-react"
+
 // import Img from "gatsby-image"
 const NewsletterCon = styled.div`
-  text-align: center;
-  padding-bottom: 50px;
+  background-image: url(${bgImg});
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+  text-align: right;
+  padding: 70px 30px;
   h3 {
     font-size: 1.5rem;
     font-family: "Nunito";
@@ -14,7 +21,7 @@ const NewsletterCon = styled.div`
   .form {
     text-align: center;
     display: flex;
-    max-width: 250px;
+    justify-content:flex-end;
     margin: 0 auto;
   }
   .field {
@@ -32,12 +39,14 @@ const NewsletterCon = styled.div`
 export default function newsletter() {
   return (
     <NewsletterCon>
-      <h3>Stay Connected</h3>
-      <p>Join our mailing list to learn more</p>
-      <Form success>
-        <Form.Input placeholder="joe@schmoe.com" />
-        <Button>submit</Button>
-      </Form>
+      <Container>
+        <h3>Stay Connected</h3>
+        <p>Join our mailing list to learn more</p>
+        <Form success>
+          <Form.Input placeholder="joe@schmoe.com" />
+          <Button>submit</Button>
+        </Form>
+      </Container>
     </NewsletterCon>
   )
 }
