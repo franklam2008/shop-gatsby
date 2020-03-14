@@ -14,7 +14,7 @@ const NewsletterCon = styled.div`
   text-align: right;
   padding: 70px 30px;
   h3 {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-family: "Nunito";
     opacity: 0.85;
   }

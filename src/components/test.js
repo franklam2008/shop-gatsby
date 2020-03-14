@@ -14,5 +14,5 @@ export default () => {
         skillNode.childImageSharp.fluid.originalName === "computer.jpg"
     )
   )
-  return <h1>welcome to</h1>
+  return <></>
 }
