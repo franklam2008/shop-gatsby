@@ -6,7 +6,7 @@ import NavItems from "./NavItems"
 import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 //assets
-import teaIcon from "../images/teaIcon.png"
+import teaIcon from "../images/logo.png"
 const HeaderCon = styled.div`
   /* background: var(--baseWhite); */
   width: 100%;
@@ -24,7 +24,7 @@ const NavLeft = styled.div`
   align-items: center;
 
   img {
-    max-width: 30px;
+    max-width: 140px;
   }
   @media (max-width: 768px) {
     width: 100%;

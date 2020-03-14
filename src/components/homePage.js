@@ -5,6 +5,9 @@ import { Container, Grid, Button } from "semantic-ui-react"
 import { Link } from "gatsby"
 import VSensorjs from "../components/VisibilitySensor"
 import Products from "../components/Products/Products"
+import productIcon from "../images/product_img.jpg"
+import homepage_info_img_3 from "../images/homepage_info_img_3.png"
+
 // import { useSiteMetadata } from "./hook/useStaticQuery"
 import { useSiteImages } from "./hook/useSiteImages"
 
@@ -17,6 +20,7 @@ const HomeCon = styled.div`
   }
 `
 const FirstCon = styled.div`
+  padding: 120px 0;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -25,6 +29,7 @@ const FirstCon = styled.div`
     font-size: 3rem;
   }
   p {
+    font-size: 1.5rem;
     opacity: 0.6;
   }
 
@@ -32,30 +37,54 @@ const FirstCon = styled.div`
     padding-top: 50px;
     text-align: center;
     .gatsby-image-wrapper {
-      margin:0 auto;
-      width:300px;
+      margin: 0 auto;
+      width: 200px;
+    }
+    h2 {
+      font-size: 2rem;
     }
   }
 `
 const HomePageSubCon = styled.div`
+  overflow: hidden;
   text-align: center;
   padding: 50px 0;
   h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-family: "Nunito";
     opacity: 0.75;
   }
   p {
+    font-size: 1.5rem;
     opacity: 0.7;
     max-width: 700px;
     margin: 0 auto;
   }
-
+  img {
+    width: 100%;
+  }
+  .bg {
+    transform: translateY(100px);
+  }
+  @media (max-width: 768px) {
+    p {
+    font-size: 1.2rem;
+  }
+  }
 `
-
+const BigTitle = styled.h2`
+  font-size: 4rem;
+  text-align: left;
+  opacity: 0.7;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  text-align: center;
+  }
+`
 export default () => {
   const { edges } = useSiteImages()
+
   const skillObj = edges.filter(
     ({ node: skillNode }) =>
       skillNode.childImageSharp.fluid.originalName === "teaHome.png"
@@ -68,7 +97,7 @@ export default () => {
           <Grid columns={2} stackable>
             <Grid.Column>
               <VSensorjs>
-                <h2>Want to stay healthy drink matcha.</h2>
+                <h2>Want to Stay Healthy Drink Matcha</h2>
                 <p>
                   Over 159 million Americans drink tea every day. Drinking tea
                   every day has more health benefits than you think.
@@ -87,15 +116,22 @@ export default () => {
 
       <HomePageSubCon className="HomePageSubCon">
         <Container>
-          <VSensorjs>
-            <h3>Unlock the benefits of tea in its purest form.</h3>
-            <p>
-              Matcha is 100% green tea leaves, ground to a fine powder. Real
-              match comes from Japan. Ours is from the Nishio regio which is
-              where the finest matcha is produced. Like all tea, matcha comes
-              form the tea plant.
-            </p>
-          </VSensorjs>
+          <Grid columns={2} stackable reversed="mobile">
+            <Grid.Column computer={6}>
+              <img className="bg" src={homepage_info_img_3} alt="" />
+            </Grid.Column>
+            <Grid.Column computer={10} verticalAlign='middle'>
+              <VSensorjs>
+                <BigTitle>Unlock the Benefits of Tea</BigTitle>
+                <p>
+                  Matcha is 100% green tea leaves, ground to a fine powder. Real
+                  match comes from Japan. Ours is from the Nishio regio which is
+                  where the finest matcha is produced. Like all tea, matcha
+                  comes form the tea plant.
+                </p>
+              </VSensorjs>
+            </Grid.Column>
+          </Grid>
         </Container>
       </HomePageSubCon>
 
@@ -110,17 +146,7 @@ export default () => {
               only be in our cup, but in our minds, our community, and our
               society.
             </p>
-            <Grid columns={3} stackable>
-              <Grid.Column>
-                <h2>1</h2>
-              </Grid.Column>
-              <Grid.Column>
-                <h2>2</h2>
-              </Grid.Column>
-              <Grid.Column>
-                <h2>3</h2>
-              </Grid.Column>
-            </Grid>
+            <img src={productIcon} alt="" />
           </VSensorjs>
         </Container>
       </HomePageSubCon>
