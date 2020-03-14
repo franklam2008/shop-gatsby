@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Container, Icon, Grid } from "semantic-ui-react"
-import teaIcon from "../../images/teaIcon.png"
+import teaIcon from "../../images/logo2.png"
 import Newsletter from "./newsletter"
 
 const Footer = styled.div`
@@ -29,7 +29,7 @@ const FooterLeft = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   img {
-    width: 30px;
+    width: 130px;
   }
   @media (max-width: 768px) {
     align-items: center;
@@ -109,7 +109,6 @@ export default function footer() {
                 <SiteInfo>
                   <Link to="/">
                     <img src={teaIcon} alt="mainIcon" />
-                    <span>Great Earth Tea</span>
                   </Link>
                 </SiteInfo>
               </FooterLeft>
